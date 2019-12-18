@@ -18,7 +18,8 @@ Please refer to the [Algolia Docs](https://www.algolia.com/doc/api-client/gettin
 
 The following services are supported and map to the appropriate Stripe resource:
 
-- `Search`
+- `Indexing`
+- `ManageIndices`
 
 ## Complete Example
 
@@ -28,11 +29,17 @@ Here's an example of a Feathers server that uses `coinapi`.
 const feathers = require("@feathersjs/feathers");
 const plugin = require("feathers-coinapi");
 
+// Provide Algolia search credentials
+const algoliaCredentials = {
+    app_id: 'YOUR_APP_ID',
+    api_key: 'YOUR_API_KEY'
+}
+
 // Initialize the application
 const app = feathers();
 
-// Initialize the plugin
-app.configure(plugin());
+// Initialize the plugin with your Algolia credentials
+app.configure(plugin(algoliaCredentials));
 ```
 
 ## License
