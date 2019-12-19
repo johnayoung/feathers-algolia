@@ -1,7 +1,7 @@
 {
   "name": "feathers-algolia",
   "description": "A Feathers service for Algolia",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "homepage": "https://github.com/johnatspreadstreet/feathers-algolia",
   "main": "lib/",
   "keywords": [
